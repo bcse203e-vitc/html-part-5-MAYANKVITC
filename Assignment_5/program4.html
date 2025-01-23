@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Navigation Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Menu Styles */
+        .nav {
+            display: flex;
+            background-color: #333;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .nav > li {
+            position: relative;
+        }
+
+        .nav > li > a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .nav > li > a:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #444;
+            min-width: 200px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown li {
+            border-bottom: 1px solid #555;
+        }
+
+        .dropdown li:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 15px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown a:hover {
+            background-color: #575757;
+        }
+
+        /* Show dropdown on hover */
+        .nav > li:hover .dropdown {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+            <a href="#">Services</a>
+            <ul class="dropdown">
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">SEO</a></li>
+                <li><a href="#">Marketing</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+</body>
+</html>
+
